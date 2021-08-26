@@ -8,8 +8,12 @@ import { DataServiceService } from '../data-service.service';
 })
 export class GifsComponent implements OnInit{
   gifs : any[] = [];
+  
+  increaseResults(){
+    return this.dataService.giveIncrease();
+  }
   constructor(private dataService: DataServiceService) { }
-
+  
   ngOnInit(): void {
     this.dataService.getTrendings();
     this.dataService.getGifs()
@@ -17,5 +21,6 @@ export class GifsComponent implements OnInit{
         this.gifs = response;
       });
   }
+
 
 }

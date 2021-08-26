@@ -9,3 +9,10 @@
 .gif img{
     max-width: 210px;
 }
+.container-fluid{
+    position: relative;
+}
+.btn{
+    position: absolute;
+    left: 50%;
+}

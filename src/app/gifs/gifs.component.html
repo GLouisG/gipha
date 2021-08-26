@@ -1,5 +1,9 @@
-<div class="gifs">
-    <div class="gif" *ngFor="let gif of gifs">
-        <img [src]="gif.images.downsized.url" alt="gifs">
+<div class="container-fluid">
+    <div class="gifs">
+        <div class="gif" *ngFor="let gif of gifs">
+            <img [src]="gif.images.downsized.url" alt="gifs">
+        </div>
     </div>
+    <button class="btn btn-success" (click)="increaseResults()">Load More</button>
 </div>
+

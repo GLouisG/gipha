@@ -8,12 +8,20 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class DataServiceService {
   gifs = new BehaviorSubject<any>([]);//Deals with data states initially empty
-
+  limit : number = 25;
   constructor(private http: HttpClient) {//inject allows for comm with the api
   }
+  
+
+  giveIncrease(){
+    console.log(this.limit);
+   return this.limit+=10;
+  } 
+  
   getTrendings(){
     const {apiKey} = environment;
-    return this.http.get(`https://api.giphy.com/v1/gifs/trending?api_key=${apiKey}&limit=25&rating=g`).subscribe((response: any)=>{
+    console.log(this.limit);
+    return this.http.get(`https://api.giphy.com/v1/gifs/trending?api_key=${apiKey}&limit=${this.limit}}&rating=g`).subscribe((response: any)=>{
     this.gifs.next(response.data);
     });
   }
