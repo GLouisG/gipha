@@ -1,8 +1,18 @@
 nav {
+    position: relative;
     background-color: #070f40;
     text-align: center;
     padding: 15px;
     color: #fff;
     font-size: 20px;
     width: 100vw;
+}
+.trend-link{
+    position: absolute;
+    bottom: 30%;
+    font-size: 80%;
+    float: left;
+}
+.trend-link:hover{
+    text-decoration: underline yellow 2.5px;
 }

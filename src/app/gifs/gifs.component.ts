@@ -6,7 +6,7 @@ import { DataServiceService } from '../data-service.service';
   templateUrl: './gifs.component.html',
   styleUrls: ['./gifs.component.css']
 })
-export class GifsComponent implements OnInit {
+export class GifsComponent implements OnInit{
   gifs : any[] = [];
   constructor(private dataService: DataServiceService) { }
 

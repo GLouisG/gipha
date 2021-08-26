@@ -12,7 +12,7 @@ export class SearchComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  
   search(query: string){
     if(query !== ''){
       this.dataService.searchGifs(query)

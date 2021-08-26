@@ -8,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class NaviComponent implements OnInit {
 
   constructor() { }
-
+  trendSetter(){
+    window.location.reload();
+  }
   ngOnInit(): void {
   }
 
