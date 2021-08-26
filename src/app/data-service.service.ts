@@ -7,11 +7,10 @@ import { environment } from 'src/environments/environment';
 })
 export class DataServiceService {
 
-  constructor(private http:HttpClient, ) {//inject allows for comm with the api
+  constructor(private http: HttpClient) {//inject allows for comm with the api
   }
   getTrendings(){
     const {apiKey} = environment;
-    return this.http.get(`https://api.giphy.com/v1/gifs/trending?
-    api_key=${apiKey}&limit=25&rating=g`);
+    return this.http.get(`https://api.giphy.com/v1/gifs/trending?api_key=${apiKey}&limit=25&rating=g`);
   }
 }
